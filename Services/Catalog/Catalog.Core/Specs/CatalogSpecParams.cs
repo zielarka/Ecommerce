@@ -13,7 +13,7 @@
         }
 
         public string? BrandId { get; set; }
-        public string? TypeId { get; set }
+        public string? TypeId { get; set; }
         public string? Sort { get; set; }
         public string? Search { get; set; }
     }
