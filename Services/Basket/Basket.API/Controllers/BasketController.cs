@@ -4,7 +4,6 @@ using Basket.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Runtime.InteropServices;
 
 namespace Basket.API.Controllers
 {
@@ -38,7 +37,7 @@ namespace Basket.API.Controllers
         [Route("[action]/{userName}", Name = "DeleteBasketByUserName")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult> DeleteBasket(string userName)
-        { 
+        {
             var cmd = new DeleteBasketByUserNameCommand(userName);
             return Ok(await _mediator.Send(cmd));
         }
